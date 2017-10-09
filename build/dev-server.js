@@ -25,13 +25,13 @@ var proxyTable = config.dev.proxyTable
 var app = express()
 
 var appdata = require('../data.json');
-var basic = appdata.basic_data;
-var focus = appdata.focus_data;
-var findmore = appdata.findmore_data;
-var findnew = appdata.findnew_data;
+var home = appdata.home_data;
+var menu = appdata.menu_data;
+var searchmore = appdata.searchmore_data;
+var searchnew = appdata.searchnew_data;
 var messagefocus = appdata.messagefocus_data;
-var find = appdata.find_data;
-var focusactive = appdata.focusactive_data;
+var search = appdata.search_data;
+var menuactive = appdata.menuactive_data;
 
 
 var apiroutes =express.Router();
