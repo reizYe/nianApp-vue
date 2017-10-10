@@ -166,5 +166,4 @@ export default {
     text-align: center;
     margin: .5rem 0;
 }
-
 </style>
