@@ -5,17 +5,19 @@ import App from './App'
 // import router from './router'
 import Router from 'vue-router'
 // import '../src/assets/common/iconfont.css'
-// import '../src/assets/css/reset.css'
+import '../src/assets/css/reset.css'
 import home from './components/home/home.vue'
 import menu from './components/menu/menu.vue'
 import adds from './components/adds/adds.vue'
 import message from './components/message/message.vue'
 import search from './components/search/search.vue'
 Vue.config.productionTip = false
-// import Element from 'element-ui'
+import Element from 'element-ui'
+require('../src/assets/common/iconfont.css')
+// require('../src/assets/css/reset.css')
 // import 'element-ui/lib/theme-default/index.css'
 Vue.use(Router)
-// Vue.use(Element)
+Vue.use(Element)
 /* eslint-disable no-new */
 // let app = Vue.extend(App)
 // let vuerouter = new Router()

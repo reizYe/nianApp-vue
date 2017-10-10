@@ -18,7 +18,9 @@
 
         <div class="tab-item">
           <router-link to="/adds">
-            <div class="addbutton"><i class="iconfont icon-add"></i></div>
+            <div class="addbutton">
+              <i class="iconfont icon-add"></i>
+            </div>
           </router-link>
         </div>
 
@@ -88,5 +90,4 @@ footer>div>div {
   width: 100%;
   height: 3rem;
 }
-
 </style>

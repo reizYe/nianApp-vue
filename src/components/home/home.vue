@@ -1,6 +1,5 @@
 <template>
     <div>
-
         <header class="home-header">
             <nav>
                 <span class="iconfont icon-set"></span>
@@ -8,12 +7,12 @@
             </nav>
             <section class="home-userinfo">
                 <div class="home-image"></div>
-                <p>蹲墙角画圈圈</p>
-                <p>倒计时 12:20</p>
+                <p>{{name}}</p>
+                <p>倒计时{{time}}</p>
                 <article>
                     <div>
                         <a>念币&nbsp;
-                            <span>10</span>
+                            <span>{{money}}</span>
                         </a>
                     </div>
                     <div>
@@ -24,13 +23,41 @@
                 </article>
             </section>
         </header>
+        <section>
 
+            <div class="home-container">
+
+                <div class="ctnhead">
+                    <span>记本</span>
+                    <span>添加记本</span>
+                </div>
+
+                <article class="ctnbody">
+                    <div>
+                        <div>
+                            <!--ui-sref="basic/basicdaily/{{item.id}}"-->
+                            <!-- <a href="#/basic/basicdaily/{{item.id}}"><img ng-src="{{item.img}}" class="containerbody-img"></a> -->
+                        </div>
+                        <p></p>
+                    </div>
+                </article>
+
+            </div>
+        </section>
     </div>
 </template>
 
 
 <script>
 export default {
+    name:'App',
+    data(){
+        return{
+            name:'蹲墙角画圈圈',
+            time:'12:25',
+            money:15
+        }
+    }
 }
 </script>
 
@@ -88,4 +115,56 @@ export default {
     text-decoration: underline;
     margin: .3rem 0;
 }
+
+.home-container {
+    margin: 2rem 10%;
+}
+
+
+/*.containerhead{*/
+
+
+/*margin: 0 10%;*/
+
+
+/*}*/
+
+.ctnhead>span:first-child {
+    font-weight: 500;
+    display: inline-block;
+}
+
+.ctnhead>span:last-child {
+    color: #8c8c8c;
+    /* display: inline-block; */
+    float: right;
+}
+
+.ctnbody {
+    /*margin-top: 1rem;*/
+    /*margin: 1rem 10%;*/
+    margin: 1rem -1.5rem 0 -1rem;
+}
+
+.ctnbody>div {
+    display: inline-block;
+    text-align: center;
+    width: 32%;
+    margin-top: 1rem;
+}
+
+.containerbody-img {
+    /*background: url("../img/p1.png");*/
+    background-size: contain;
+    display: inline-block;
+    text-align: center;
+    width: 5rem;
+    height: 5rem;
+}
+
+.ctnbody p {
+    text-align: center;
+    margin: .5rem 0;
+}
+
 </style>
