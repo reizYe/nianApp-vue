@@ -35,28 +35,28 @@ var menuactive = appdata.menuactive_data;
 
 
 var apiroutes =express.Router();
-apiroutes.get('/basic',function(req,res){
+apiroutes.get('/home',function(req,res){
   res.json({
     errno:0,
-    data:basic
+    data:home
   });
 });
-apiroutes.get('/focus', function (req, res) {
+apiroutes.get('/menu', function (req, res) {
   res.json({
     errno: 0,
-    data: focus
+    data: menu
   });
 });
-apiroutes.get('/findmore', function (req, res) {
+apiroutes.get('/searchmore', function (req, res) {
   res.json({
     errno: 0,
-    data: findmore
+    data: searchmore
   });
 });
-apiroutes.get('/findnew', function (req, res) {
+apiroutes.get('/searchnew', function (req, res) {
   res.json({
     errno: 0,
-    data: findnew
+    data: searchnew
   });
 });
 apiroutes.get('/messagefocus', function (req, res) {
@@ -65,16 +65,16 @@ apiroutes.get('/messagefocus', function (req, res) {
     data: messagefocus
   });
 });
-apiroutes.get('/find', function (req, res) {
+apiroutes.get('/search', function (req, res) {
   res.json({
     errno: 0,
-    data: find
+    data: search
   });
 });
-apiroutes.get('/focusactive', function (req, res) {
+apiroutes.get('/menuactive', function (req, res) {
   res.json({
     errno: 0,
-    data: focusactive
+    data: menuactive
   });
 });
 app.use('/api',apiroutes);

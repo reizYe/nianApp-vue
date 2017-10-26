@@ -11,10 +11,11 @@ import menu from './components/menu/menu.vue'
 import adds from './components/adds/adds.vue'
 import message from './components/message/message.vue'
 import search from './components/search/search.vue'
+import menuactive from './components/menu/menuactive.vue'
 Vue.config.productionTip = false
 import Element from 'element-ui'
 require('../src/assets/common/iconfont.css')
-// require('../src/assets/css/reset.css')
+require('../src/assets/css/reset.css')
 // import 'element-ui/lib/theme-default/index.css'
 Vue.use(Router)
 Vue.use(Element)
@@ -32,7 +33,8 @@ const routes = [
   { path: '/menu', component: menu },
   { path: '/adds', component: adds },
   { path: '/message', component: message },
-  { path: '/search', component: search }
+  { path: '/search', component: search },
+  { path: '/menuactive', component: menuactive }
 ]
 const router = new Router({
   routes

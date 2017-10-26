@@ -49,14 +49,25 @@
 
 
 <script>
+const err_ok = 0;
 export default {
     name:'App',
     data(){
         return{
             name:'蹲墙角画圈圈',
             time:'12:25',
-            money:15
+            money:15,
+            home:{}
         }
+    },
+    created() {
+        this.$http.get('/api/home').then((response)=>{
+            response = response.body;
+            if(response.errno===err_ok){
+                this.home = response.data;
+                console.log(this.home);
+            }
+        });
     }
 }
 </script>
