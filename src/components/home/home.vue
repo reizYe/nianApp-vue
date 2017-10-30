@@ -2,7 +2,7 @@
     <div>
         <header class="home-header">
             <nav>
-                <span class="iconfont icon-set"></span>
+                <router-link to="/home/setting"><span class="iconfont icon-set"></span></router-link>
                 <span class="iconfont icon-service"></span>
             </nav>
             <section class="home-userinfo">

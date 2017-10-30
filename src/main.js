@@ -7,6 +7,10 @@ import Router from 'vue-router'
 // import '../src/assets/common/iconfont.css'
 import '../src/assets/css/reset.css'
 import home from './components/home/home.vue'
+import collect from './components/home/collect.vue'
+import daily from './components/home/daily.vue'
+import money from './components/home/money.vue'
+import setting from './components/home/setting.vue'
 import menu from './components/menu/menu.vue'
 import adds from './components/adds/adds.vue'
 import message from './components/message/message.vue'
@@ -31,8 +35,14 @@ const routes = [
 // 配置默认路由*
   { path: '*', component: home },
   { path: '/menu', component: menu },
+  { path: '/home/collect', component: collect },
+  { path: '/home/daily', component: daily },
+  { path: '/home/money', component: money },
+  { path: '/home/setting', component: setting },
   { path: '/adds', component: adds },
   { path: '/message', component: message },
+  { path: '/search', component: search },
+  { path: '/search', component: search },
   { path: '/search', component: search },
   { path: '/menuactive', component: menuactive }
 ]
