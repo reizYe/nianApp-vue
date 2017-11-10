@@ -153,9 +153,12 @@ i:hover {
   /*text-align: center;*/
   display: inline-block;
   margin: 0 1rem;
-  color: #8c8c8c;
+  color: #ffffff;
 }
 
 .commonbody {
   padding-top: 3rem;
+}
+.commonheader a{
+    color: #fff;
 }

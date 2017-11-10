@@ -2,7 +2,7 @@
    <div>
        <header class="commonheader">
     <section>
-        <span class="iconfont icon-back" ui-sref="find"></span>
+        <router-link to='/search'><span class="iconfont icon-back recommendtitle"></span></router-link>
         <div>
             <span class="addheader">最新</span>
         </div>
@@ -12,9 +12,10 @@
 <section class="commonbody">
     <article>
         <div class="recommendcontent">
-            <div ng-repeat="item in findnewlist">
-                <img ng-src="{{item.img}}" alt="">
-                <p>{{item.title}}</p>
+             <!-- ng-repeat="item in findnewlist" -->
+            <div>
+                <!-- <img ng-src="{{item.img}}" alt=""> -->
+                <!-- <p>{{item.title}}</p> -->
             </div>
             <!--<div>-->
             <!--<img src="img/animal.jpg" alt="">-->
@@ -56,5 +57,12 @@
     height: 4.5rem;
     display: block;
     padding-bottom: .5rem;
+}
+.recommendtitle{
+    float: left;
+    margin: 0;
+}
+.addheader{
+    margin: 0
 }
 </style>

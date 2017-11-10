@@ -12,7 +12,7 @@
 </header>
 <section class="commonbody">
     <article class="moneyheader">
-        <img src="img/money.jpg" alt="">
+        <img src="../../assets/img/money.jpg" alt="">
         <p>剩余念币</p>
         <p>{{allofmoney}}</p>
         <!--<p>{{firstmoney}}</p>-->
@@ -58,7 +58,7 @@
 
 <style scoped>
 .commonheader>section>div.moneyhead{
-    width: 75%;
+    width: 55%;
 }
 .moneyheader{
     text-align: center;
@@ -106,9 +106,11 @@
     font-size: 1rem;
 }
 .moneyfunc>span:nth-child(2){
-    display: inline-block;
+    /* display: inline-block; */
+    float: right;
 }
 .moneyfunc>span:last-child{
     color: #8b8b8b;
+    font-size: 12px;
 }
 </style>

@@ -2,7 +2,7 @@
  <div>
 <header class="commonheader">
     <section>
-       <router-link to="/home"> <span class="iconfont icon-back"></span></router-link>
+       <router-link to="/home"> <span class="iconfont icon-back collecttitle"></span></router-link>
         <div>
             <span class="addheader">收藏</span>
             <!--<span ui-sref="focus/focusactive">动态</span>-->
@@ -71,7 +71,9 @@
     font-size: 1rem;
     padding:0.5rem 1rem;
 }
-
+.collecttitle {
+    float: left;
+}
 .collectfocus{
     margin-top: 1rem;
 }

@@ -11,7 +11,7 @@
             <article class="hotnews">
                 <div class="hottitle">
                     <span>推荐</span>
-                <router-link to="search/findmore"><span class="righttext">更多></span></router-link>
+                <router-link to="search/recommond"><span class="righttext">更多></span></router-link>
                 </div>
                 <div class="hotcontent">
                     <div>
@@ -35,7 +35,7 @@
             <article class="hotnews">
                 <div class="hottitle">
                     <span>最新</span>
-                    <router-link to="search/searchnew"><span class="righttext">更多></span></router-link>
+                    <router-link to="search/newlist"><span class="righttext">更多></span></router-link>
                 </div>
                 <div class="hotcontent">
                     <div>
