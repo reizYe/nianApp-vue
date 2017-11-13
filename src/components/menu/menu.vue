@@ -5,7 +5,7 @@
         <span class="iconfont icon-account"></span>
         <div>
             <router-link to="/menu"><span>关注</span></router-link>
-            <router-link to="/menuactive"><span>动态</span></router-link>
+            <router-link to="/menu/menuactive"><span>动态</span></router-link>
         </div>
         <span class="iconfont icon-search"></span>
     </section>
@@ -111,8 +111,8 @@ export default {};
 }
 .focus-img {
   display: inline-block;
-  /*background: url("../img/2.jpg");*/
-  /*background-size: contain;*/
+  background: url("../../assets/img/2.jpg");
+  background-size: contain;
   width: 2rem;
   height: 2rem;
   border-radius: 1rem;

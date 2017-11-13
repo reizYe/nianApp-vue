@@ -1,6 +1,10 @@
+//node自带的文件路径工具
 var path = require('path')
+//工具函数集合
 var utils = require('./utils')
+//配置文件
 var config = require('../config')
+//工具函数集合
 var vueLoaderConfig = require('./vue-loader.conf')
 
 function resolve (dir) {
@@ -11,15 +15,21 @@ module.exports = {
   entry: {
     app: './src/main.js'
   },
+  
   output: {
+    //编译输出的静态资源根路径
     path: config.build.assetsRoot,
+    //编译输出的文件名
     filename: '[name].js',
+    //正式发布环境下编译输出的上线路径的跟路径
     publicPath: process.env.NODE_ENV === 'production'
       ? config.build.assetsPublicPath
       : config.dev.assetsPublicPath
   },
   resolve: {
+    //自动补全的扩展名
     extensions: ['.js', '.vue', '.json'],
+    //路径别名
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
       '@': resolve('src'),
@@ -28,6 +38,7 @@ module.exports = {
   module: {
     rules: [
       {
+        //审查js和vue文件
         test: /\.vue$/,
         loader: 'vue-loader',
         options: vueLoaderConfig

@@ -16,6 +16,8 @@ import adds from './components/adds/adds.vue'
 import message from './components/message/message.vue'
 import search from './components/search/search.vue'
 import menuactive from './components/menu/menuactive.vue'
+import recommond from './components/search/recommond.vue'
+import newlist from './components/search/newlist.vue'
 Vue.config.productionTip = false
 import Element from 'element-ui'
 require('../src/assets/common/iconfont.css')
@@ -42,9 +44,9 @@ const routes = [
   { path: '/adds', component: adds },
   { path: '/message', component: message },
   { path: '/search', component: search },
-  { path: '/search', component: search },
-  { path: '/search', component: search },
-  { path: '/menuactive', component: menuactive }
+  { path: '/search/newlist', component: newlist },
+  { path: '/search/recommond', component: recommond },
+  { path: '/menu/menuactive', component: menuactive }
 ]
 const router = new Router({
   routes

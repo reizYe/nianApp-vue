@@ -3,18 +3,23 @@
         <header class="home-header">
             <nav>
                 <router-link to="/home/setting"><span class="iconfont icon-set"></span></router-link>
-                <span class="iconfont icon-service"></span>
+                <router-link to='/home/collect'>
+                    <span class="iconfont icon-service"></span>
+                </router-link>
             </nav>
             <section class="home-userinfo">
                 <div class="home-image"></div>
                 <p>{{name}}</p>
                 <p>倒计时{{time}}</p>
                 <article>
-                    <div>
+                    <router-link to='/home/money'>
+                        <div>
                         <a>念币&nbsp;
                             <span>{{money}}</span>
                         </a>
                     </div>
+                    </router-link>
+                    
                     <div>
                         <a href="">宠物&nbsp;
                             <span>yes</span>
@@ -112,7 +117,7 @@ export default {
     padding-bottom: 2rem;
 }
 
-.home-userinfo>article>div {
+.home-userinfo>article div {
     display: inline-block;
     background-color: #0c0c0c;
     opacity: 0.7;
@@ -131,7 +136,9 @@ export default {
     margin: 2rem 10%;
 }
 
-
+.home-header a{
+    color: #fff;
+}
 /*.containerhead{*/
 
 
