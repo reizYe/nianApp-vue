@@ -12,7 +12,8 @@
 <section class="commonbody">
     <article class="basicdailybody">
         <div class="basicdailyfirst">
-            <img ng-src="{{daily.img}}" alt="">
+            <!-- ng-src="{{daily.img}}" -->
+            <img  alt="">
             <button>更新</button>
         </div>
         <div class="basicdailysecond">
