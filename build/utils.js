@@ -1,5 +1,8 @@
+//node自带的文件路径工具
 var path = require('path')
+//配置文件
 var config = require('../config')
+//提取CSS
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 exports.assetsPath = function (_path) {
