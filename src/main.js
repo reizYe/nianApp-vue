@@ -22,9 +22,11 @@ Vue.config.productionTip = false
 import Element from 'element-ui'
 require('../src/assets/common/iconfont.css')
 require('../src/assets/css/reset.css')
+import vuesource from 'vue-resource'
 // import 'element-ui/lib/theme-default/index.css'
 Vue.use(Router)
 Vue.use(Element)
+Vue.use(vuesource)
 /* eslint-disable no-new */
 // let app = Vue.extend(App)
 // let vuerouter = new Router()

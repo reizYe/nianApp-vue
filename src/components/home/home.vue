@@ -67,6 +67,7 @@ export default {
     },
     created() {
         this.$http.get('/api/home').then((response)=>{
+            console.log(response)
             response = response.body;
             if(response.errno===err_ok){
                 this.home = response.data;
