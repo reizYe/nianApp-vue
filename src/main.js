@@ -18,7 +18,7 @@ import search from './components/search/search.vue'
 import menuactive from './components/menu/menuactive.vue'
 import recommond from './components/search/recommond.vue'
 import newlist from './components/search/newlist.vue'
-import vuesource from 'vue-resource'
+import axios from 'axios'
 Vue.config.productionTip = false
 import Element from 'element-ui'
 require('../src/assets/common/iconfont.css')
@@ -26,7 +26,7 @@ require('../src/assets/css/reset.css')
 // import 'element-ui/lib/theme-default/index.css'
 Vue.use(Router)
 Vue.use(Element)
-Vue.use(vuesource)
+Vue.prototype.$axios = axios
 /* eslint-disable no-new */
 // let app = Vue.extend(App)
 // let vuerouter = new Router()

@@ -66,12 +66,15 @@ export default {
         }
     },
     created() {
-        this.$http.get('/api/home').then((response)=>{
+        this.$axios.get('/api/home').then((response)=>{
+            console.log(response);
             response = response.body;
             if(response.errno===err_ok){
                 this.home = response.data;
                 console.log(this.home);
             }
+        },(error)=>{
+            console.log(error);
         });
     }
 }
