@@ -1,5 +1,4 @@
 629E7154E2695F08A3C692C0B3F6CE19DF6D3A72  VS激活码
-http://localhost/index.html
 垂直居中 
 	 文字居中 子元素设置行高
 	 图片 父元素设置行高，图片垂直居中

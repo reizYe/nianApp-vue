@@ -7,7 +7,7 @@ var config = require('../config')
 var merge = require('webpack-merge')
 // webpack基本配置
 var baseWebpackConfig = require('./webpack.base.conf')
-//自动生成html并且注入到。html文件中的插件
+//自动生成html并且注入到.html文件中的插件
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 //webpack错误信息提示
 
