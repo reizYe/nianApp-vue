@@ -60,7 +60,7 @@
 <script>
 const err_ok = 0;
 export default {
-  name: "App",
+  name: "app",
   data() {
     return {
       name: "蹲墙角画圈圈",
@@ -76,7 +76,7 @@ export default {
         response = response.data;
         if (response.errno === err_ok) {
           this.home = response.data;
-          console.log(this.home);
+          // console.log(this.home);
         }
       },
       error => {

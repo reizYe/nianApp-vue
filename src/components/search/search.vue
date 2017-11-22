@@ -64,6 +64,26 @@
 
 <script>
 export default {
+    name:"bottomcontent",
+    data(){
+        return{
+            search:{
+
+            }
+        }
+    },
+    created(){
+        this.$axios.get("api/search").then(
+            res=>{
+                res = res.data.data;
+                this.search = res;
+                console.log(this.search)
+            },
+            error=>{
+                console.log(error)
+            }
+        )
+    }
 }
 </script>
 
@@ -91,7 +111,7 @@ export default {
     margin-right: .8rem;
 }
 .hotcontent>div>div{
-    /* background: url('../'); */
+    background: url('../../assets/img/1.jpg');
     background-size: contain;
     display: inline-block;
     /*text-align: center;*/

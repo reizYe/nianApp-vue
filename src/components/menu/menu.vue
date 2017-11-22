@@ -11,9 +11,9 @@
     </section>
 </header>
 <section class="commonbody">
-    <!-- <article class="focus-article" ng-repeat="item in focuslist">
+    <article class="focus-article" v-for="item in menu" :key="item.id">
         <div>
-            <img ng-src="{{item.img}}" class="focus-img" alt="">
+            <img :src="item.img" class="focus-img" alt="">
             <div class="focus-userinfo clearfix">
                 <p>{{item.name}}</p>
                 <span class="timespan clearfix">{{item.time}}</span>
@@ -31,7 +31,7 @@
             </div>
 
         </div>
-    </article> -->
+    </article>
     <article class="focus-article">
         <div>
             <span class="focus-img"></span>
@@ -101,10 +101,29 @@
 
 
 <script>
-export default {};
+export default {
+    name:"commonbody",
+    data(){
+        return{
+            menu:{}
+        }
+    },
+    created(){
+        this.$axios.get("api/menu").then(
+            res=>{
+                res = res.data;
+                this.menu = res.data;
+                // console.log(this.menu)
+            },
+            error=>{
+                console.log(error)
+            }
+        )
+    }
+};
 </script>
 
-<style scoped>
+<style >
 .focus-article {
   margin: 2rem 1rem;
   border-bottom: 1px solid #c2baba;

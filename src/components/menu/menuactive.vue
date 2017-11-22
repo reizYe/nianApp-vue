@@ -10,27 +10,27 @@
         <span class="iconfont icon-search"></span>
     </section>
 </header>
-<section class="commonbody">
-    <!-- <article class="focus-article" ng-repeat="item in focusactivelist">
+<section class="commonbody commentbody">
+    <article class="focus-article" v-for="items in menuactive" :key="items.id">
         <div>
-            <img ng-src="{{item.img}}" class="focus-img" alt="">
+            <img :src="items.img" class="focus-img" alt="">
             <div class="focus-userinfo clearfix">
-                <p>{{item.name}}</p>
-                <span class="timespan clearfix">{{item.time}}</span>
-                <p>赞了：{{item.type}}</p>
+                <p>{{items.name}}</p>
+                <span class="timespan clearfix">{{items.time}}</span>
+                <p>赞了：{{items.type}}</p>
             </div>
         </div>
-        <div class="focus-content">{{item.content}}</div>
+        <div class="focus-content">{{items.content}}</div>
         <div class="focus-bottom">
             <span><b>回应</b></span>
-            <span><b>赞&nbsp;{{item.good}}</b></span>
+            <span><b>赞&nbsp;{{items.good}}</b></span>
             <div class="focus-bottom-right">
                 <button><i class="iconfont icon-viewgallery"></i></button>
                 <button><i class="iconfont icon-gifts"></i></button>
                 <button><i class="iconfont icon-jewelry"></i></button>
             </div>
         </div>
-    </article> -->
+    </article>
 </section>
     </div>
 </template>
@@ -38,6 +38,24 @@
 
 <script>
 export default {
+    name:"commentbody",
+    data(){
+        return{
+            menuactive:{}
+        }
+    },
+    created(){
+        this.$axios.get("api/menuactive").then(
+            res=>{
+                res = res.data;
+                this.menuactive = res.data;
+                console.log(this.menuactive)
+            },
+            error=>{
+                console.log(error)
+            }
+        )
+    }
 }
 </script>
 
