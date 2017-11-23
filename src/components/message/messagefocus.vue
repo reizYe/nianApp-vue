@@ -8,7 +8,6 @@
         <div>
             <span class="addheader">关注</span>
         </div>
-        <!--<span class="iconfont icon-success"></span>-->
     </section>
 </header>
 <section class="commonbody">
@@ -26,25 +25,23 @@
 </template>
 <script>
 export default {
-    name:"messagebody",
-    daata(){
-        return{
-            messagefocus:{
-
-            }
-        }
-    },
-    created(){
-        this.$axios.get("api/messagefocus").then(
-            res=>{
-                this.messagefocus = res.data.data;
-            },
-            error=>{
-                console.log(error)
-            }
-        )
-    }
-
+  name: "app",
+  daata() {
+    return {
+      messagefocus: {}
+    };
+  },
+  created() {
+    this.$axios.get("api/messagefocus").then(
+      res => {
+        this.messagefocus = res.data.data;
+        console.log(this.messagefocus);
+      },
+      error => {
+        console.log(error);
+      }
+    );
+  }
 };
 </script>
 <style scoped>

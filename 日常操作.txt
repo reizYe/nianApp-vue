@@ -1,4 +1,4 @@
-629E7154E2695F08A3C692C0B3F6CE19DF6D3A72  VS激活码
+
 垂直居中 
 	 文字居中 子元素设置行高
 	 图片 父元素设置行高，图片垂直居中
@@ -10,6 +10,7 @@ git remote add origin git@github.com:reizYe/nianapp.git 关联到远程仓库
 git branch,git branch addform,git checkout addform
 git push -u origin master 将本地资料推送到远程仓库
 git push origin addform 新建分支推送
+git push origin master:bugfix 将本地文件推送到远程分支
 cd .. 返回上层目录
 git push origin develop:master -f 将分支推送到主线
 git branch -m oldbranchname newbranchname git 分支重命名
@@ -23,8 +24,3 @@ q 退出log
 git push origin master -f 强制推送到远程分支,( )
 远程推送出现错误,需要先拉远程文件再推送,可以强制推送分支,git push origin nian-Refactoring -f
 git checkout -b newBrach origin/master 在origin/master 的基础上创建一个新分支
-
-
-双向数据绑定:有个$digest循环和watcher函数,$digest会由一些事件触发,从而进行进行脏检测,遍历一遍所有的watcher函数,只有watcher函数监听的值没有改变,就会更新到dom里面
-查看进程:netstat –aon | findstr “8080”
-杀死进程:tskill 3500 

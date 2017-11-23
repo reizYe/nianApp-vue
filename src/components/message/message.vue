@@ -19,7 +19,7 @@
     </article>
     <article class="messagecontent">
         <div>这里是空的 <br>要去给好友写信吗？</div>
-        <router-link to="/message/messagefocus">
+        <router-link to="/messagefocus">
              <button><a>嗯！</a></button>
         </router-link>
     </article>

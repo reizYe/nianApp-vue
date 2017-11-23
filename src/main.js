@@ -51,7 +51,7 @@ const routes = [
   { path: '/search/newlist', component: newlist },
   { path: '/search/recommond', component: recommond },
   { path: '/menu/menuactive', component: menuactive },
-  { path: '/message/messagefocus', component: messagefocus }
+  { path: '/messagefocus', component: messagefocus }
 ]
 const router = new Router({
   routes

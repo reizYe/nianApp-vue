@@ -18,10 +18,10 @@
       </div>
     </article>
     <article @click="close()">
-        <div class="addchoosetext" v-show="isshow" >
-            <div v-for="item in adds" :key="item.id">
+        <div class="addchoosetext" v-show="isshow">
+            <div v-for="item in adds" :key="item.id" @click="selectdesc(item.description,item.img)">
                 <img :src="item.img">
-                <span @click="selectdesc(item.description,item.img)">{{item.description}}</span>
+                <span>{{item.description}}</span>
             </div>
         </div>
     </article>
@@ -59,19 +59,20 @@ export default {
           this.choosetext =x;
       },
      close: function (){
-          if(this.isshow ==true){
-              this.isshow = false;
-          }
-          else{
-              this.isshow = false;
-          }
+        //   if(this.isshow ==true){
+        //       this.isshow = false;
+        //   }
+        //   else{
+        //       this.isshow = false;
+        //   }
+        this.isshow = false;
       },
      toggle: function (){
           if(this.isshow ==true){
               this.isshow = false;
           }
           else{
-              this.isshow = false;
+              this.isshow = true;
           }
       }
     }
@@ -115,10 +116,11 @@ export default {
 .addshowtext > b {
   display: inline-block;
   background-size: 500px;
-  background-position: -80px -368px;
+  background-position: -82px -368px;
   width: 2rem;
   height: 2rem;
   padding-top: 0.5rem;
+  padding-left:0.5rem; 
   vertical-align: middle;
   transform: rotate(90deg);
 }
