@@ -19,7 +19,7 @@
     </article>
     <article @click="close()">
         <div class="addchoosetext" v-show="isshow" >
-            <div ng-repeat="item in adds">
+            <div v-for="item in adds" :key="item.id">
                 <img :src="item.img">
                 <span @click="selectdesc(item.description,item.img)">{{item.description}}</span>
             </div>
@@ -35,8 +35,9 @@ export default {
     name:"commonbody",
     data(){
         return{
-            myimages:"",
-            isshow:false,
+            myimages:"./static/img/p1.png",
+            choosetext:"日常",
+            isshow:true,
             adds:{
 
             }
@@ -52,9 +53,26 @@ export default {
             }
         )
     },
-    methods(){
-      function selectdesc(x,y){
-
+    methods:{
+     selectdesc: function (x,y){
+          this.myimages = y;
+          this.choosetext =x;
+      },
+     close: function (){
+          if(this.isshow ==true){
+              this.isshow = false;
+          }
+          else{
+              this.isshow = false;
+          }
+      },
+     toggle: function (){
+          if(this.isshow ==true){
+              this.isshow = false;
+          }
+          else{
+              this.isshow = false;
+          }
       }
     }
 
