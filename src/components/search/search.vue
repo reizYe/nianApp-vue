@@ -2,7 +2,9 @@
     <div>
        <header class="commonheader">
             <section>
+                <!-- <span class="iconfont icon-back"></span> -->
                 <div>
+                    
                     <span class="addheader">热门</span>
                 </div>
             </section>
@@ -56,6 +58,29 @@
                     </div>
                 </div>
             </article>
+             <article class="hotnews" v-for="item in search" :key="item.id">
+        <ul>
+            <li class="clearfix">
+                <span class="hotusernum">#{{item.id}}</span>
+                <div class="userinfo">
+                    <img :src="item.img" alt=""><br>
+                    <b>{{item.title}}</b><br>
+                    <span>{{item.content}}</span>
+                </div>
+                <div class="userstatus">
+                    <div>
+                        <span>按&nbsp;&nbsp;赞</span><br>
+                        <b>{{item.saygood}}</b>
+                    </div>
+                    <div>
+                        <span>进&nbsp;&nbsp;展</span><br>
+                        <b>{{item.progress}}</b>
+                    </div>
+                </div>
+            </li>
+
+        </ul>
+    </article>
             <div class="bottomcontent"></div>
         </section>
     </div>
@@ -64,79 +89,77 @@
 
 <script>
 export default {
-    name:"bottomcontent",
-    data(){
-        return{
-            search:{
-
-            }
-        }
-    },
-    created(){
-        this.$axios.get("api/search").then(
-            res=>{
-                res = res.data.data;
-                this.search = res;
-                console.log(this.search)
-            },
-            error=>{
-                console.log(error)
-            }
-        )
-    }
-}
+  name: "hotnews",
+  data() {
+    return {
+      search: {}
+    };
+  },
+  created() {
+    this.$axios.get("api/search").then(
+      res => {
+        res = res.data.data;
+        this.search = res;
+        console.log(this.search);
+      },
+      error => {
+        console.log(error);
+      }
+    );
+  }
+};
 </script>
 
 <style scoped>
-.hotnews{
-    margin: 1rem 0.8rem 0 0.8rem;
-    border-bottom: solid 0.01rem #cccccc;
+.hotnews {
+  margin: 1rem 0.8rem 0 0.8rem;
+  border-bottom: solid 0.01rem #cccccc;
 }
-.hottitle>span:first-child{
-    font-size: 1rem;
+.hottitle > span:first-child {
+  font-size: 1rem;
 }
-.hottitle>span:last-child{
-    float: right;
-    font-size: .8rem;
-    color: #8c8c8c;
+.hottitle > span:last-child {
+  float: right;
+  font-size: 0.8rem;
+  color: #8c8c8c;
 }
-.hotnews>div:last-child{
-    margin: 1rem 0;
-    text-align: center;
+.hotnews > div:last-child {
+  margin: 1rem 0;
+  text-align: center;
 }
-.hotcontent>div{
-    /*text-align: center;*/
-    display: inline-block;
-    width: 18%;
-    margin-right: .8rem;
+.hotcontent > div {
+  /*text-align: center;*/
+  display: inline-block;
+  width: 18%;
+  margin-right: 0.8rem;
 }
-.hotcontent>div>div{
-    background: url('../../assets/img/1.jpg');
-    background-size: contain;
-    display: inline-block;
-    /*text-align: center;*/
-    width: 3.5rem;
-    height: 3.5rem;
+.hotcontent > div > div {
+  background: url("../../assets/img/1.jpg");
+  background-size: contain;
+  display: inline-block;
+  /*text-align: center;*/
+  width: 3.5rem;
+  height: 3.5rem;
 }
-.hotcontent>div>p{
-    white-space:nowrap;
-    overflow:hidden;
-    text-overflow:ellipsis;
+.hotcontent > div > p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-.hotnews>ul>li{
-    text-align: center;
+.hotnews > ul > li {
+  text-align: center;
 }
-.hotusernum{
-    display: inline-block;
-    text-align: center;
-    background-color: #bcb7b7;
-    opacity: 0.5;
-    width: 2rem;
-    height: 1rem;
-    margin-top: -1rem;
+.hotusernum {
+  display: inline-block;
+  text-align: center;
+  background-color: #bcb7b7;
+  opacity: 0.5;
+  width: 2rem;
+  height: 1rem;
+  margin-top: -1rem;
 }
-.righttext{
-    float: right;
-    font-size: .8rem;
+.righttext {
+  float: right;
+  font-size: 0.8rem;
 }
 </style>

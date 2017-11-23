@@ -68,7 +68,7 @@ apiroutes.get('/searchmore', function (req, res) {
     data: searchmore
   });
 });
-apiroutes.get('/searchnew', function (req, res) {
+apiroutes.post('/searchnew', function (req, res) {
   res.json({
     errno: 0,
     data: searchnew

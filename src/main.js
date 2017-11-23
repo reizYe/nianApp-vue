@@ -18,6 +18,7 @@ import search from './components/search/search.vue'
 import menuactive from './components/menu/menuactive.vue'
 import recommond from './components/search/recommond.vue'
 import newlist from './components/search/newlist.vue'
+import messagefocus from './components/message/messagefocus.vue'
 import axios from 'axios'
 Vue.config.productionTip = false
 import Element from 'element-ui'
@@ -49,7 +50,8 @@ const routes = [
   { path: '/search', component: search },
   { path: '/search/newlist', component: newlist },
   { path: '/search/recommond', component: recommond },
-  { path: '/menu/menuactive', component: menuactive }
+  { path: '/menu/menuactive', component: menuactive },
+  { path: '/message/messagefocus', component: messagefocus }
 ]
 const router = new Router({
   routes

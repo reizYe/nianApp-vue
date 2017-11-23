@@ -12,10 +12,10 @@
 <section class="commonbody">
     <article>
         <div class="recommendcontent">
-            <!-- ng-repeat="item in findmorelist" -->
-            <div>
-                <!-- <img ng-src="{{item.img}}" alt=""> -->
-                <!-- <p>{{item.title}}</p> -->
+            
+            <div v-for="item in recommond" :key="item.id">
+                <img :src="item.img" alt="">
+                <p>{{item.title}}</p>
             </div>
             <!--<div>-->
                 <!--<img src="img/animal.jpg" alt="">-->
@@ -35,12 +35,23 @@
 
 <script>
     export default { 
-        // name:'app', 
-        // data(){
-        //     return{
-        //         title:'reiz'
-        //     }
-        // }
+        name:'recommendcontent', 
+        data(){
+            return{
+                recommond:{
+
+                }
+            }
+        },
+        created(){
+            this.$axios.post('/api/searchnew',{}).then(
+                res=>{
+                    this.recommond = res.data.data;
+                    console.log(this.recommond);
+                }
+            )
+        }
+
     }
 </script>
 
