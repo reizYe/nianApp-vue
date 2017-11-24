@@ -14,7 +14,7 @@
       <div class="addshowtext" @click="toggle()">
           <img  :src="myimages">
           <span>{{choosetext}}</span>
-          <b class="sprites2x"></b>
+          <b class="sprites2x" :class="{addsactive:isshow}"></b>
       </div>
     </article>
     <article @click="close()">
@@ -37,7 +37,7 @@ export default {
         return{
             myimages:"./static/img/p1.png",
             choosetext:"日常",
-            isshow:true,
+            isshow:false,
             adds:{
 
             }
@@ -59,12 +59,6 @@ export default {
           this.choosetext =x;
       },
      close: function (){
-        //   if(this.isshow ==true){
-        //       this.isshow = false;
-        //   }
-        //   else{
-        //       this.isshow = false;
-        //   }
         this.isshow = false;
       },
      toggle: function (){
@@ -122,7 +116,12 @@ export default {
   padding-top: 0.5rem;
   padding-left:0.5rem; 
   vertical-align: middle;
+  /* transform: rotate(0deg); */
+  transition: all 0.5s;
+}
+.addsactive{
   transform: rotate(90deg);
+
 }
 .addchoosetext > div {
   padding: 0 1rem;
