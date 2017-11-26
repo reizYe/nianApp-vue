@@ -13,7 +13,7 @@
     <article class="basicdailybody">
         <div class="basicdailyfirst">
             <!-- ng-src="{{daily.img}}" -->
-            <img  alt="">
+            <img :src="daily.img">
             <button>更新</button>
         </div>
         <div class="basicdailysecond">
@@ -39,6 +39,13 @@
 
 <script>
     export default {  
+        name:"basicdailyfirst",
+        data(){
+            return{
+                
+            }
+        }
+
     }
 </script>
 

@@ -34,15 +34,15 @@
 
                 <div class="ctnhead">
                     <span>记本</span>
-                    <router-link to="/home/daily">
-                    <span>添加记本</span>
+                    <router-link :to="{ name:'curId', params: {id: 1}}">
+                    <span class="addtext">添加记本</span>
                     </router-link>
                 </div>
                
                 <article class="ctnbody">
                   
                     <div v-for="item in home" :key="item.id">
-                      <router-link to="/home/daily">
+                      <router-link :to="{ name:'curId', params: {id: item.id}}">
                         <div>
                             <a>
                               <img v-bind:src="item.img"  class="ctnbody-img">
@@ -150,20 +150,14 @@ export default {
 .home-header a {
   color: #fff;
 }
-/*.containerhead{*/
-
-/*margin: 0 10%;*/
-
-/*}*/
 
 .ctnhead > span:first-child {
   font-weight: 500;
   display: inline-block;
 }
 
-.ctnhead > span:last-child {
+.addtext{
   color: #8c8c8c;
-  /* display: inline-block; */
   float: right;
 }
 
