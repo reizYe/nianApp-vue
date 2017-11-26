@@ -34,13 +34,15 @@
 
                 <div class="ctnhead">
                     <span>记本</span>
+                    <router-link to="/home/daily">
                     <span>添加记本</span>
+                    </router-link>
                 </div>
                
                 <article class="ctnbody">
                   
                     <div v-for="item in home" :key="item.id">
-                      <router-link to="">
+                      <router-link to="/home/daily">
                         <div>
                             <a>
                               <img v-bind:src="item.img"  class="ctnbody-img">
@@ -50,7 +52,6 @@
                   </router-link>
                     </div>
                 </article>
-               <!-- <img src="../../assets/img/1.jpg" alt=""> -->
             </div>
         </section>
     </div>
