@@ -40,19 +40,20 @@ Vue.prototype.$axios = axios
 const routes = [
 // 配置默认路由*
   { path: '*', component: home },
-  {
-    path: '/home',
-    component: home,
-    children: [
-      {
-        name: 'curId', path: '/home/daily/:id', component: daily
-      }
-    ]
-  },
+  // {
+  //   path: '/home',
+  //   component: home,
+  //   children: [
+  //     {
+  //       name: 'curId', path: '/home/daily/:id', component: daily
+  //     }
+  //   ]
+  // },
   { path: '/menu', component: menu },
   { path: '/home/collect', component: collect },
   { path: '/home/money', component: money },
   { path: '/home/setting', component: setting },
+  { name: 'curid', path: '/home/daily/:id/:desc/:src', component: daily },
   { path: '/adds', component: adds },
   { path: '/message', component: message },
   { path: '/search', component: search },

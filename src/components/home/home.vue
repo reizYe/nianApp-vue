@@ -34,7 +34,7 @@
 
                 <div class="ctnhead">
                     <span>记本</span>
-                    <router-link :to="{ name:'curId', params: {id: 1}}">
+                    <router-link :to="{ name:'curid', params: {id: 1,desc:'',src:''}}">
                     <span class="addtext">添加记本</span>
                     </router-link>
                 </div>
@@ -42,7 +42,7 @@
                 <article class="ctnbody">
                   
                     <div v-for="item in home" :key="item.id">
-                      <router-link :to="{ name:'curId', params: {id: item.id}}">
+                      <router-link :to="{ name:'curid', params: {id: item.id,desc:item.description,src:item.img}}">
                         <div>
                             <a>
                               <img v-bind:src="item.img"  class="ctnbody-img">
@@ -156,7 +156,7 @@ export default {
   display: inline-block;
 }
 
-.addtext{
+.addtext {
   color: #8c8c8c;
   float: right;
 }

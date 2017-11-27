@@ -38,25 +38,25 @@
 
 <script>
 export default {
-    name:"commentbody",
-    data(){
-        return{
-            menuactive:{}
-        }
-    },
-    created(){
-        this.$axios.get("api/menuactive").then(
-            res=>{
-                res = res.data;
-                this.menuactive = res.data;
-                console.log(this.menuactive)
-            },
-            error=>{
-                console.log(error)
-            }
-        )
-    }
-}
+  name: "commentbody",
+  data() {
+    return {
+      menuactive: {}
+    };
+  },
+  created() {
+    this.$axios.get("api/menuactive").then(
+      res => {
+        res = res.data;
+        this.menuactive = res.data;
+        console.log(this.menuactive);
+      },
+      error => {
+        console.log(error);
+      }
+    );
+  }
+};
 </script>
 
 <style scoped>

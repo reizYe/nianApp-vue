@@ -25,8 +25,8 @@
 </template>
 <script>
 export default {
-  name: "app",
-  daata() {
+  name: "messagebody",
+  data() {
     return {
       messagefocus: {}
     };
