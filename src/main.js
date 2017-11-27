@@ -45,13 +45,13 @@ const routes = [
     component: home,
     children: [
       {
-        name: 'curId', path: '/home/money/:id', component: money
+        name: 'curId', path: '/home/daily/:id', component: daily
       }
     ]
   },
   { path: '/menu', component: menu },
   { path: '/home/collect', component: collect },
-  { path: '/home/daily', component: daily },
+  { path: '/home/money', component: money },
   { path: '/home/setting', component: setting },
   { path: '/adds', component: adds },
   { path: '/message', component: message },
