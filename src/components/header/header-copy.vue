@@ -2,7 +2,7 @@
  <div>
      <header class="commonheader">
     <section>
-         <span class="iconfont" :class="lticon"></span>
+        <span class="iconfont" :class="lticon"></span>
         <div>
             <router-link to="/menu"><span>{{ftheader}}</span></router-link>
             <router-link to="/menu/menuactive"><span>{{sdheader}}</span></router-link>
@@ -16,23 +16,28 @@
 
 <script>
 export default {
-  data() {
-    return {
-      ftheader: "关注",
-      sdheader: "动态",
-      lticon: "icon-account",
-      rticon: "icon-search"
-    };
+  data(){
+    return{
+      ftheader:"关注",
+      sdheader:"动态",
+      lticon:"icon-account",
+      rticon:"icon-search"
+    }
   },
-  props: ["param"],
-  mounted() {
-    this.ftheader = this.parama;
+  props:['param'],
+  computed:{
+    set(){
+      ftheader=this.param[0];
+      console.log(ftheader)
+    },
+    // ftheader:function(){
+    //   return this.param;
+    // },
+    
+    // sdheader(){
+    //   return "1"
+    // }
   }
-  // computed:{
-  //   focus(){
-  //     return this.param;
-  //   }
-  // }
 };
 </script>
 

@@ -7,7 +7,7 @@
                 </div>
             </section>
         </header> -->
-        <vheader :param="param" ></vheader>
+        <vheader :param="parama,paramb,paramc,paramd" ></vheader>
     <section class="commonbody">
         <article class="messagearticle">
             <div>
@@ -30,12 +30,12 @@
 <script>
 // import vheader from "../header/header.vue";
 export default {
-//    components:{
-//        vheader
-//    },
 data(){
     return{
-        param:"1111"
+        parama:"消息",
+        paramb:"",
+        paramc:"",
+        paramd:"",
     }
 }
 }
