@@ -9,6 +9,7 @@
         <span class="iconfont icon-success"></span>
     </section>
 </header>
+
 <section class="commonbody">
     <article class="addbody">
       <div class="addshowtext" @click="toggle()">

@@ -4,6 +4,7 @@
 // import App from 'src/App.vue'
 // import Hello from '@/components/Hello'
 // import Element from 'element-ui'
+// import vheader from './components/header/header.vue'
 // Vue.use(Router)
 // Vue.use(Element)
 // export default new Router({

@@ -120,7 +120,6 @@ export default {
   border-bottom: 1px solid #cccccc;
   width: 100%;
   height: 3rem;
-  /*text-align: center;*/
 }
 .basicdailyfourth > img {
   width: 1.5rem;

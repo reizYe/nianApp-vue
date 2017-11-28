@@ -13,6 +13,7 @@ import money from './components/home/money.vue'
 import setting from './components/home/setting.vue'
 import menu from './components/menu/menu.vue'
 import adds from './components/adds/adds.vue'
+import vheader from './components/header/header.vue'
 import message from './components/message/message.vue'
 import search from './components/search/search.vue'
 import menuactive from './components/menu/menuactive.vue'
@@ -21,13 +22,13 @@ import newlist from './components/search/newlist.vue'
 import messagefocus from './components/message/messagefocus.vue'
 import axios from 'axios'
 Vue.config.productionTip = false
-import Element from 'element-ui'
+// import Element from 'element-ui'
 require('../src/assets/common/iconfont.css')
 require('../src/assets/css/reset.css')
-// import vuesource from 'vue-resource'
-// import 'element-ui/lib/theme-default/index.css'
+
 Vue.use(Router)
-Vue.use(Element)
+// Vue.use(Element)
+Vue.component('vheader', vheader)
 Vue.prototype.$axios = axios
 /* eslint-disable no-new */
 // let app = Vue.extend(App)

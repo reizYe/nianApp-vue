@@ -1,35 +1,43 @@
 <template>
     <div>
-       <header class="commonheader">
-    <section>
-        <!--<span class="iconfont icon-back"></span>-->
-        <div>
-            <span class="addheader">消息</span>
-        </div>
-        <!--<span class="iconfont icon-success"></span>-->
+        <!-- <header class="commonheader">
+            <section>
+                <div>
+                    <span class="addheader">消息</span>
+                </div>
+            </section>
+        </header> -->
+        <vheader :param="param" ></vheader>
+    <section class="commonbody">
+        <article class="messagearticle">
+            <div>
+                <div><span>回&nbsp;&nbsp;应</span> <br><b>0</b></div>
+                <div><span>按&nbsp;&nbsp;赞</span> <br><b>0</b></div>
+                <div><span>通&nbsp;&nbsp;知</span> <br><b>0</b></div>
+            </div>
+        </article>
+        <article class="messagecontent">
+            <div>这里是空的 <br>要去给好友写信吗？</div>
+            <router-link to="/messagefocus">
+                <button><a>嗯！</a></button>
+            </router-link>
+        </article>
     </section>
-</header>
-<section class="commonbody">
-    <article class="messagearticle">
-        <div>
-            <div><span>回&nbsp;&nbsp;应</span> <br><b>0</b></div>
-            <div><span>按&nbsp;&nbsp;赞</span> <br><b>0</b></div>
-            <div><span>通&nbsp;&nbsp;知</span> <br><b>0</b></div>
-        </div>
-    </article>
-    <article class="messagecontent">
-        <div>这里是空的 <br>要去给好友写信吗？</div>
-        <router-link to="/messagefocus">
-             <button><a>嗯！</a></button>
-        </router-link>
-    </article>
-</section>
     </div>
 </template>
 
 
 <script>
+// import vheader from "../header/header.vue";
 export default {
+//    components:{
+//        vheader
+//    },
+data(){
+    return{
+        param:"1111"
+    }
+}
 }
 </script>
 
