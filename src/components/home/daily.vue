@@ -3,16 +3,15 @@
      <header class="commonheader">
     <section class="basicdailyheader">
        <router-link to="/home"> <span class="iconfont icon-back"></span></router-link>
-        <div>
-            <!--<span class="addheader">新进展！</span>-->
-        </div>
+          <div>
+          
+          </div>
         <span class="iconfont icon-more"></span>
     </section>
 </header>
 <section class="commonbody">
     <article class="basicdailybody">
         <div class="basicdailyfirst">
-            <!-- ng-src="{{daily.img}}" -->
             <img :src="dailyname">
             <button>更新</button>
         </div>

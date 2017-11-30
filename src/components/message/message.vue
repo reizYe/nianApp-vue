@@ -7,7 +7,7 @@
                 </div>
             </section>
         </header> -->
-        <vheader :param="parama,paramb,paramc,paramd" ></vheader>
+        <vheader :params="params" ></vheader>
     <section class="commonbody">
         <article class="messagearticle">
             <div>
@@ -32,16 +32,14 @@
 export default {
 data(){
     return{
-        parama:"消息",
-        paramb:"",
-        paramc:"",
-        paramd:"",
+       params:['消息','','','','','','']
     }
 }
 }
 </script>
 
 <style scoped>
+
 .messagearticle{
     text-align: center;
     padding-top:1rem ;
@@ -58,7 +56,6 @@ data(){
 .messagearticle>div>div>span{
     color: #8c8c8c;
     margin: 0 1rem;
-    /*letter-spacing: 0.5rem;*/
 }
 .messagearticle>div>div>b{
     display: inline-block;

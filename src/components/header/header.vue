@@ -1,16 +1,18 @@
 <template>
  <div>
-     <header class="commonheader">
-    <section>
-         <span class="iconfont" :class="lticon"></span>
-        <div>
-            <router-link to="/menu"><span>{{ftheader}}</span></router-link>
-            <router-link to="/menu/menuactive"><span>{{sdheader}}</span></router-link>
-        </div>
-        <span class="iconfont" :class="rticon"></span>
-    </section>
-</header>
- </div>
+    <header class="commonheader">
+      <section>
+          <router-link :to='linkback'>
+            <span class="iconfont" :class="lticon"></span>
+          </router-link>
+          <div>
+            <router-link :to="linkmenu"><span>{{ftheader}}</span></router-link>
+            <router-link :to="linkmenuactive"><span>{{sdheader}}</span></router-link>
+          </div>
+          <span class="iconfont" :class="rticon"></span>
+      </section>
+    </header>
+  </div>
 </template>
 
 
@@ -21,12 +23,21 @@ export default {
       ftheader: "关注",
       sdheader: "动态",
       lticon: "icon-account",
-      rticon: "icon-search"
+      rticon: "icon-search",
+      linkback:'',
+      linkmenu:'',
+      linkmenuactive:''
     };
   },
-  props: ["param"],
+  props: ["params"],
   mounted() {
-    this.ftheader = this.parama;
+    this.ftheader = this.params[0];
+    this.sdheader = this.params[1];
+    this.lticon = this.params[2];
+    this.rticon = this.params[3];
+    this.linkback = this.params[4];
+    this.linkmenu = this.params[5];
+    this.linkmenuactive = this.params[6];
   }
   // computed:{
   //   focus(){
@@ -59,9 +70,7 @@ export default {
 }
 
 .commonheader span {
-  /*text-align: center;*/
   display: inline-block;
-  margin: 0 1rem;
   color: #ffffff;
 }
 

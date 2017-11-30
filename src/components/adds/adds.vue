@@ -1,6 +1,6 @@
 <template>
     <div>
-        <header class="commonheader">
+        <!-- <header class="commonheader">
     <section>
         <router-link to="/home"><span class="iconfont icon-back"></span></router-link>
         <div>
@@ -8,12 +8,13 @@
         </div>
         <span class="iconfont icon-success"></span>
     </section>
-</header>
+</header> -->
+        <vheader :params="params" ></vheader>
 
 <section class="commonbody">
     <article class="addbody">
       <div class="addshowtext" @click="toggle()">
-          <img  :src="myimages">
+          <img :src="myimages">
           <span>{{choosetext}}</span>
           <b class="sprites2x" :class="{addsactive:isshow}"></b>
       </div>
@@ -33,45 +34,42 @@
 
 <script>
 export default {
-    name:"commonbody",
-    data(){
-        return{
-            myimages:"./static/img/p1.png",
-            choosetext:"日常",
-            isshow:false,
-            adds:{
-
-            }
-        }
-    },
-    created(){
-        this.$axios.get("api/home").then(
-            res=>{
-                this.adds = res.data.data;
-            },
-            error=>{
-                console.log(error)
-            }
-        )
-    },
-    methods:{
-     selectdesc: function (x,y){
-          this.myimages = y;
-          this.choosetext =x;
+  name: "commonbody",
+  data() {
+    return {
+      myimages: "./static/img/p1.png",
+      choosetext: "日常",
+      isshow: false,
+      adds: {},
+      params:['新进展！','','icon-back','icon-success','/home']
+    };
+  },
+  created() {
+    this.$axios.get("api/home").then(
+      res => {
+        this.adds = res.data.data;
       },
-     close: function (){
+      error => {
+        console.log(error);
+      }
+    );
+  },
+  methods: {
+    selectdesc: function(x, y) {
+      this.myimages = y;
+      this.choosetext = x;
+    },
+    close: function() {
+      this.isshow = false;
+    },
+    toggle: function() {
+      if (this.isshow == true) {
         this.isshow = false;
-      },
-     toggle: function (){
-          if(this.isshow ==true){
-              this.isshow = false;
-          }
-          else{
-              this.isshow = true;
-          }
+      } else {
+        this.isshow = true;
       }
     }
-
+  }
 };
 </script>
 
@@ -115,14 +113,13 @@ export default {
   width: 2rem;
   height: 2rem;
   padding-top: 0.5rem;
-  padding-left:0.5rem; 
+  padding-left: 0.5rem;
   vertical-align: middle;
   /* transform: rotate(0deg); */
   transition: all 0.5s;
 }
-.addsactive{
+.addsactive {
   transform: rotate(90deg);
-
 }
 .addchoosetext > div {
   padding: 0 1rem;

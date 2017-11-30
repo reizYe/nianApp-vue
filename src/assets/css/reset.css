@@ -150,9 +150,7 @@ i:hover {
 }
 
 .commonheader span {
-  /*text-align: center;*/
   display: inline-block;
-  margin: 0 1rem;
   color: #ffffff;
 }
 
