@@ -41,7 +41,7 @@ export default {
       choosetext: "日常",
       isshow: false,
       adds: {},
-      params:['新进展！','','icon-back','icon-success','/home']
+      params:['icon-back','/home','新进展！','','','','icon-success']
     };
   },
   created() {

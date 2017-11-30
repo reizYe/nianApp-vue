@@ -2,7 +2,6 @@
     <div>
        <header class="commonheader">
             <section>
-                <!-- <span class="iconfont icon-back"></span> -->
                 <div>
                     
                     <span class="addheader">热门</span>

@@ -1,6 +1,6 @@
 <template>
     <div>
-        <header class="commonheader">
+        <!-- <header class="commonheader">
     <section>
         <span class="iconfont icon-account"></span>
         <div>
@@ -9,7 +9,8 @@
         </div>
         <span class="iconfont icon-search"></span>
     </section>
-</header>
+</header> -->
+<vheader :params='params'></vheader>
 <section class="commonbody">
     <article class="focus-article" v-for="item in menu" :key="item.id">
         <div>
@@ -105,7 +106,8 @@ export default {
     name:"commonbody",
     data(){
         return{
-            menu:{}
+            menu:{},
+            params:['icon-account','','关注','/menu','动态','/menu/menuactive','icon-search']
         }
     },
     created(){

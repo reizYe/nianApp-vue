@@ -24,26 +24,21 @@ export default {
       sdheader: "动态",
       lticon: "icon-account",
       rticon: "icon-search",
-      linkback:'',
-      linkmenu:'',
-      linkmenuactive:''
+      linkback: "",
+      linkmenu: "",
+      linkmenuactive: ""
     };
   },
   props: ["params"],
   mounted() {
-    this.ftheader = this.params[0];
-    this.sdheader = this.params[1];
-    this.lticon = this.params[2];
-    this.rticon = this.params[3];
-    this.linkback = this.params[4];
-    this.linkmenu = this.params[5];
-    this.linkmenuactive = this.params[6];
+    this.lticon = this.params[0];
+    this.linkback = this.params[1];
+    this.ftheader = this.params[2];
+    this.linkmenu = this.params[3];
+    this.sdheader = this.params[4];
+    this.linkmenuactive = this.params[5];
+    this.rticon = this.params[6];
   }
-  // computed:{
-  //   focus(){
-  //     return this.param;
-  //   }
-  // }
 };
 </script>
 

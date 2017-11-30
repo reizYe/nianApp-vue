@@ -1,6 +1,6 @@
 <template>
     <div>
-       <header class="commonheader">
+       <!-- <header class="commonheader">
     <section>
         <span class="iconfont icon-account"></span>
         <div>
@@ -9,7 +9,8 @@
         </div>
         <span class="iconfont icon-search"></span>
     </section>
-</header>
+</header> -->
+<vheader :parmas='parmas'></vheader>
 <section class="commonbody commentbody">
     <article class="focus-article" v-for="items in menuactive" :key="items.id">
         <div>
@@ -41,7 +42,16 @@ export default {
   name: "commentbody",
   data() {
     return {
-      menuactive: {}
+      menuactive: {},
+      params: [
+        "icon-account",
+        "",
+        "关注",
+        "/menu",
+        "动态",
+        "/menu/menuactive",
+        "icon-search"
+      ]
     };
   },
   created() {

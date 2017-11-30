@@ -30,54 +30,54 @@
 <script>
 // import vheader from "../header/header.vue";
 export default {
-data(){
-    return{
-       params:['消息','','','','','','']
-    }
-}
-}
+  data() {
+    return {
+      params: ["", "", "消息", "", "", "", ""]
+    };
+  }
+};
 </script>
 
 <style scoped>
-
-.messagearticle{
-    text-align: center;
-    padding-top:1rem ;
-    background-color: #e9e3e3;
+.messagearticle {
+  text-align: center;
+  padding-top: 1rem;
+  background-color: #e9e3e3;
 }
-.messagearticle>div>div{
-    display: inline-block;
-    margin-bottom: 1rem;
-    text-align: center;
+.messagearticle > div > div {
+  display: inline-block;
+  margin-bottom: 1rem;
+  text-align: center;
 }
-.messagearticle>div>div:first-child,.messagearticle>div>div:nth-child(2){
-    border-right: solid .01rem #cccccc;
+.messagearticle > div > div:first-child,
+.messagearticle > div > div:nth-child(2) {
+  border-right: solid 0.01rem #cccccc;
 }
-.messagearticle>div>div>span{
-    color: #8c8c8c;
-    margin: 0 1rem;
+.messagearticle > div > div > span {
+  color: #8c8c8c;
+  margin: 0 1rem;
 }
-.messagearticle>div>div>b{
-    display: inline-block;
-    text-align: center;
+.messagearticle > div > div > b {
+  display: inline-block;
+  text-align: center;
 }
-.messagecontent{
-    margin-top: 12rem;
-    text-align: center;
+.messagecontent {
+  margin-top: 12rem;
+  text-align: center;
 }
-.messagecontent>div{
-    color: #8c8c8c;
+.messagecontent > div {
+  color: #8c8c8c;
 }
-.messagecontent>button{
-    margin-top: 1rem;
-    width: 5rem;
-    height: 2rem;
-    border-radius: 2rem;
-    background-color: #00a0df;
-    border: none;
+.messagecontent > button {
+  margin-top: 1rem;
+  width: 5rem;
+  height: 2rem;
+  border-radius: 2rem;
+  background-color: #00a0df;
+  border: none;
 }
-.messagecontent>button a{
-    text-decoration: underline;
-    color: white;
+.messagecontent > button a {
+  text-decoration: underline;
+  color: white;
 }
 </style>

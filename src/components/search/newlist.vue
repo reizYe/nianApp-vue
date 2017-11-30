@@ -1,14 +1,14 @@
 <template>
    <div>
-       <header class="commonheader">
+       <!-- <header class="commonheader">
     <section>
         <router-link to='/search'><span class="iconfont icon-back recommendtitle"></span></router-link>
         <div>
             <span class="addheader">最新</span>
         </div>
-        <!--<span class="iconfont icon-success"></span>-->
     </section>
-</header>
+</header> -->
+<vheader :params='params'></vheader>
 <section class="commonbody">
     <article>
         <div class="recommendcontent">
@@ -38,7 +38,8 @@ export default {
   name: "recommendcontent",
   data() {
     return {
-      searchmore: {}
+      searchmore: {},
+      params:['icon-back','/search','最新','','','','']
     };
   },
   created() {
