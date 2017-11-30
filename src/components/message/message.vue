@@ -7,7 +7,7 @@
                 </div>
             </section>
         </header> -->
-        <vheader :params="params" ></vheader>
+        <vheader :params="params"></vheader>
     <section class="commonbody">
         <article class="messagearticle">
             <div>
@@ -32,7 +32,7 @@
 export default {
 data(){
     return{
-       params:['消息','','','','','','']
+       params:['','','消息','','','','']
     }
 }
 }
